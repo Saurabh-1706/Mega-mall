@@ -1,3 +1,5 @@
+import { ParallaxImage } from "./../components/ui/ParallaxImage";
+
 export default function Attractions() {
   return (
     <>
@@ -71,7 +73,7 @@ export default function Attractions() {
 {/* World Waterpark */}
 <div className="relative w-full h-auto lg:h-[716px] flex flex-col lg:flex-row mb-16 lg:mb-32 group">
 <div className="w-full lg:w-2/3 h-[300px] lg:h-auto overflow-hidden">
-<img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="/images/wem/wem_ice_palace.jpg" alt="World Waterpark at West Edmonton Mall" />
+<ParallaxImage src="/images/wem/wem_ice_palace.jpg" alt="World Waterpark at West Edmonton Mall" />
 </div>
 <div className="w-full lg:w-1/3 bg-surface-container-high p-8 md:p-16 flex flex-col justify-center relative">
 <span className="absolute -left-12 top-20 text-[10rem] font-bold text-white/5 font-headline select-none">01</span>
@@ -88,7 +90,7 @@ export default function Attractions() {
 {/* Galaxyland */}
 <div className="relative w-full h-auto lg:h-[716px] flex flex-col lg:flex-row-reverse mb-16 lg:mb-32 group">
 <div className="w-full lg:w-2/3 h-[300px] lg:h-auto overflow-hidden">
-<img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="/images/wem/wem_galaxyland.jpg" alt="Galaxyland indoor amusement park" />
+<ParallaxImage src="/images/wem/wem_galaxyland.jpg" alt="Galaxyland indoor amusement park" />
 </div>
 <div className="w-full lg:w-1/3 bg-surface-container-lowest p-8 md:p-16 flex flex-col justify-center relative">
 <span className="absolute -right-12 top-20 text-[10rem] font-bold text-white/5 font-headline select-none">02</span>
@@ -105,7 +107,7 @@ export default function Attractions() {
 {/* Sea Life Caverns */}
 <div className="relative w-full h-auto lg:h-[716px] flex flex-col lg:flex-row group mb-16 lg:mb-0">
 <div className="w-full lg:w-2/3 h-[300px] lg:h-auto overflow-hidden">
-<img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="/images/wem/wem_sealife.jpg" alt="Sea Life Caverns aquarium at West Edmonton Mall" />
+<ParallaxImage src="/images/wem/wem_sealife.jpg" alt="Sea Life Caverns aquarium at West Edmonton Mall" />
 </div>
 <div className="w-full lg:w-1/3 bg-surface-container p-8 md:p-16 flex flex-col justify-center relative">
 <span className="absolute -left-12 top-20 text-[10rem] font-bold text-white/5 font-headline select-none">03</span>

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { MagneticButton } from "../components/ui/MagneticButton";
+import { ParallaxImage } from "../components/ui/ParallaxImage";
 
 export const metadata: Metadata = {
   title: "Events & Venue | West Edmonton Mall",
@@ -35,18 +37,12 @@ export default function Events() {
               From sold-out concerts to global brand launches and corporate conventions — West Edmonton Mall is North America&apos;s most powerful live event platform, with 5.3 million square feet and 30 million captive visitors annually.
             </p>
             <div className="flex flex-wrap gap-6">
-              <a
-                href="#book"
-                className="luxury-gradient text-on-primary px-12 py-5 font-bold uppercase tracking-widest text-xs"
-              >
+              <MagneticButton className="luxury-gradient text-on-primary px-12 py-5 font-bold uppercase tracking-widest text-xs">
                 Inquire About Booking
-              </a>
-              <a
-                href="#venues"
-                className="border border-white/20 px-12 py-5 font-bold uppercase tracking-widest text-xs text-white hover:bg-white/10 transition-colors"
-              >
+              </MagneticButton>
+              <MagneticButton className="border border-white/20 px-12 py-5 font-bold uppercase tracking-widest text-xs text-white hover:bg-white/10 transition-colors">
                 Explore Venues
-              </a>
+              </MagneticButton>
             </div>
           </div>
         </section>
@@ -149,11 +145,7 @@ export default function Events() {
               </div>
               <div className="relative">
                 <div className="aspect-[4/5] overflow-hidden">
-                  <img
-                    alt="Event at WEM"
-                    className="w-full h-full object-cover"
-                    src="/images/wem/wem_event.jpg"
-                  />
+                  <ParallaxImage src="/images/wem/wem_event.jpg" alt="Event at WEM" speed={1.5} />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-surface-container-high p-8 border-l-4 border-primary max-w-xs">
                   <p className="font-headline text-3xl text-primary mb-1">$120M+</p>

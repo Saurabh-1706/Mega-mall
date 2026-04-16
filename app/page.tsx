@@ -1,4 +1,7 @@
 import AvailabilityForm from "./components/AvailabilityForm";
+import { MagneticButton } from "./components/ui/MagneticButton";
+import { StaggerContainer, StaggerItem } from "./components/ui/StaggerContainer";
+import { TextReveal } from "./components/ui/TextReveal";
 
 export default function Home() {
   return (
@@ -7,25 +10,26 @@ export default function Home() {
 {/* Hero Section — Cinematic Video-First */}
 <section className="relative h-screen flex items-center justify-center overflow-hidden">
 <div className="absolute inset-0 z-0">
-  {/* Cinematic Animated Background */}
-  <div 
-    className="absolute inset-0 w-full h-full bg-cover bg-center scale-105 pointer-events-none transition-transform duration-[20000ms]"
-    style={{ backgroundImage: "url('/images/wem/wem_night_hero.jpg')" }}
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover scale-105 pointer-events-none"
+    src="/images/wem/Sequence 02.mp4"
   />
   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
 </div>
 <div className="relative z-10 text-center px-6 max-w-6xl">
 <p className="font-label uppercase tracking-[0.5em] text-primary text-sm mb-6">A World Unto Itself</p>
-<h1 className="font-headline text-6xl md:text-9xl font-bold text-on-surface leading-tight tracking-tighter mb-8">
-                    THE ORIGINAL <br/> <span className="gold-gradient-text italic">MEGA-MALL</span>
-</h1>
+<TextReveal text="THE ORIGINAL MEGA-MALL" className="font-headline text-5xl md:text-8xl font-bold font-italic mb-4 h-auto py-12" />
 <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-12">
-<button className="bg-primary text-on-primary px-12 py-5 font-bold uppercase tracking-widest text-sm hover:scale-105 transition-transform active:scale-95">
+<MagneticButton className="bg-primary text-on-primary px-12 py-5 font-bold uppercase tracking-widest text-sm active:scale-95">
                         Experience The Vision
-                    </button>
-<button className="border border-white/20 px-12 py-5 font-bold uppercase tracking-widest text-sm hover:bg-white/10 transition-colors">
+                    </MagneticButton>
+<MagneticButton className="border border-white/20 px-12 py-5 font-bold uppercase tracking-widest text-sm hover:bg-white/10 transition-colors">
                         View Retail Space
-                    </button>
+                    </MagneticButton>
 </div>
 </div>
 {/* Scroll Indicator */}
@@ -36,24 +40,24 @@ export default function Home() {
 </section>
 {/* Stats Section (Cinematic Minimalist) */}
 <section className="py-32 bg-surface-container-lowest px-12 border-y border-white/5">
-<div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-<div className="space-y-2">
+<StaggerContainer className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<StaggerItem className="space-y-2">
 <span className="font-headline text-5xl text-primary font-bold">5.3M</span>
 <p className="font-label uppercase text-[10px] tracking-[0.2em] text-white/40">Square Feet of Experience</p>
-</div>
-<div className="space-y-2">
+</StaggerItem>
+<StaggerItem className="space-y-2">
 <span className="font-headline text-5xl text-white font-bold">800+</span>
 <p className="font-label uppercase text-[10px] tracking-[0.2em] text-white/40">Global Retail Brands</p>
-</div>
-<div className="space-y-2">
+</StaggerItem>
+<StaggerItem className="space-y-2">
 <span className="font-headline text-5xl text-white font-bold">30.8M</span>
 <p className="font-label uppercase text-[10px] tracking-[0.2em] text-white/40">Annual Visitors</p>
-</div>
-<div className="space-y-2">
+</StaggerItem>
+<StaggerItem className="space-y-2">
 <span className="font-headline text-5xl text-white font-bold">20K+</span>
 <p className="font-label uppercase text-[10px] tracking-[0.2em] text-white/40">Parking Spaces</p>
-</div>
-</div>
+</StaggerItem>
+</StaggerContainer>
 </section>
 {/* The Vision Section (Asymmetric Bento) */}
 <section className="py-32 px-12 bg-background">
