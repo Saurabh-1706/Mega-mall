@@ -16,7 +16,7 @@ export default function Events() {
             <img
               alt="WEM Concert Event"
               className="w-full h-full object-cover opacity-50 scale-105"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBszPcAcv4md3SNklPp82QRZTgpY5Er5qJPXL912EOeiO1uonswTI5EmjSXT0HiE8C-FiKhOPbxbMgMZjlJxfiMXdxbVsqPsBeMASsovaTaO1XiMR2RePyN5IWy5Agqs3U97phReApBiB64lJtfljrCcBpax7QlIlmXcz5OEFAreBG84TlU32-CI4Fyy-sX99Tkt0bNwvafGI_vNHiQ1oflEze86tUCnFN4ysZpSXUmrK8T6nEPETqot5u2h3KY6oBFqD4oK8VYbKF5"
+              src="/images/wem/wem_night_hero.jpg"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
@@ -152,7 +152,7 @@ export default function Events() {
                   <img
                     alt="Event at WEM"
                     className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi3MKKg0hHKB5rnqxqzrnAd8S1FVPM-mwTVuVMcQCfMyBjec_2MCe7aAQ5eqspGP7Joe4vYz82rTDNhI4rrzKtswo4aF0NGQ1XTlDThs8qA-Va3xJDU26L6POkAAjJaoUzKMZrlhgIy8shJ8C43e_El9eIxeuU-G1A6MWSCJSzuzpP09-ffd0KJWQmkI6Sk_2x0wjRqcsMaJosjLbOCZ_DCgRwLPX4CNICIMHqhSpfuWCqQs5iSB4MnAE4BvSBK7hlxgh5jr"
+                    src="/images/wem/wem_event.jpg"
                   />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-surface-container-high p-8 border-l-4 border-primary max-w-xs">

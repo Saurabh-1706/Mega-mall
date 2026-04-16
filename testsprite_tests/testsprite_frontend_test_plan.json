@@ -1,9 +1,9 @@
 [
   {
     "id": "TC001",
-    "title": "Jump between all main sections via the sidebar",
-    "description": "Verifies a visitor can navigate from the home page through all main sections using the fixed sidebar and the active section indicator updates each time.",
-    "category": "Non-linear Sidebar Navigation",
+    "title": "Complete discovery journey through cinematic navigation and homepage sections",
+    "description": "Verifies a visitor can move from the homepage through cinematic navigation to overview and attractions and return while core homepage sections remain reachable.",
+    "category": "Global Navigation",
     "steps": [
       {
         "type": "action",
@@ -11,36 +11,44 @@
       },
       {
         "type": "action",
-        "description": "Click the sidebar link to go to the overview page"
+        "description": "Open the global navigation menu"
       },
       {
         "type": "action",
-        "description": "Click the sidebar link to go to the retail page"
+        "description": "Click the link to view the overview page"
       },
       {
         "type": "action",
-        "description": "Click the sidebar link to go to the attractions page"
+        "description": "Open the global navigation menu"
       },
       {
         "type": "action",
-        "description": "Click the sidebar link to go to the events page"
+        "description": "Click the link to return to the homepage"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the homepage districts section"
+      },
+      {
+        "type": "action",
+        "description": "Open the global navigation menu"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the attractions page"
       },
       {
         "type": "assertion",
-        "description": "Verify the events page content is displayed"
-      },
-      {
-        "type": "assertion",
-        "description": "Verify the active sidebar navigation item reflects the current page"
+        "description": "Verify the attractions page main content is displayed"
       }
     ],
     "priority": "High"
   },
   {
     "id": "TC002",
-    "title": "Navigate between key sections via sidebar",
-    "description": "Verifies a visitor can use the fixed sidebar to navigate across the main routes and the correct page loads each time with the active nav state updating.",
-    "category": "Landing Page Storytelling Sections",
+    "title": "Navigate from homepage to overview using global menu",
+    "description": "Verifies a visitor can open the cinematic navigation from the homepage and reach the overview page successfully.",
+    "category": "Global Navigation",
     "steps": [
       {
         "type": "action",
@@ -48,36 +56,283 @@
       },
       {
         "type": "action",
-        "description": "Click the sidebar navigation link for the overview section"
+        "description": "Click the hamburger menu icon to open the navigation"
       },
       {
         "type": "action",
-        "description": "Click the sidebar navigation link for the retail section"
-      },
-      {
-        "type": "action",
-        "description": "Click the sidebar navigation link for the attractions section"
-      },
-      {
-        "type": "action",
-        "description": "Click the sidebar navigation link for the events section"
+        "description": "Click the navigation link to the overview section"
       },
       {
         "type": "assertion",
-        "description": "Verify the events page content is displayed"
-      },
-      {
-        "type": "assertion",
-        "description": "Verify the sidebar shows the events link as the active location"
+        "description": "Verify the overview page content is displayed"
       }
     ],
     "priority": "High"
   },
   {
     "id": "TC003",
-    "title": "Sidebar navigation works when starting from another section",
-    "description": "Verifies a visitor can start on a non-home section and use the sidebar to navigate to another section with the active item updating.",
-    "category": "Non-linear Sidebar Navigation",
+    "title": "Submit availability inquiry successfully",
+    "description": "Verifies a prospective sponsor or lessee can complete the availability form and see a persistent acknowledgement UI after submission.",
+    "category": "Availability / Claim Your Place Form",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /sponsorships"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the Claim Your Place availability section"
+      },
+      {
+        "type": "action",
+        "description": "Fill a company name into the company name field"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid option from the requirement dropdown"
+      },
+      {
+        "type": "action",
+        "description": "Fill valid contact details into the contact fields"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a submission acknowledgement or confirmation UI is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Navigate across all top-level routes via global navigation",
+    "description": "Verifies a user can use the global navigation to reach each public route without getting stuck.",
+    "category": "Global Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Open the global navigation menu"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the overview page"
+      },
+      {
+        "type": "action",
+        "description": "Open the global navigation menu"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the attractions page"
+      },
+      {
+        "type": "action",
+        "description": "Open the global navigation menu"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the events page"
+      },
+      {
+        "type": "action",
+        "description": "Open the global navigation menu"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the retail page"
+      },
+      {
+        "type": "action",
+        "description": "Open the global navigation menu"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the sponsorships page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sponsorships page main content is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Close global navigation after opening it",
+    "description": "Verifies a visitor can dismiss the cinematic navigation after opening it and return to the underlying page view.",
+    "category": "Global Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the hamburger menu icon to open the navigation"
+      },
+      {
+        "type": "action",
+        "description": "Close the navigation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the navigation overlay is not displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "Availability form shows required-field validation then allows successful resubmission",
+    "description": "Verifies the availability form blocks submission with missing required fields, shows client-side validation errors, and succeeds after correcting inputs.",
+    "category": "Availability / Claim Your Place Form",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /sponsorships"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the Claim Your Place availability section"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify client-side validation errors for required fields are displayed"
+      },
+      {
+        "type": "action",
+        "description": "Fill a company name into the company name field"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid option from the requirement dropdown"
+      },
+      {
+        "type": "action",
+        "description": "Fill valid contact details into the contact fields"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a submission acknowledgement or confirmation UI is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "Secondary CTA navigates to retail",
+    "description": "Verifies a visitor can use the secondary hero call-to-action to reach the retail page successfully.",
+    "category": "Hero CTA Button Interactions",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the secondary call-to-action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the retail page content is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "Mobile-first navigation between key sections without layout breakage",
+    "description": "Verifies a mobile user can navigate between homepage, events, and retail using the hamburger navigation and the homepage layout remains usable.",
+    "category": "Mobile Navigation and Responsive Layout",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Resize the viewport to a mobile width"
+      },
+      {
+        "type": "action",
+        "description": "Open the global navigation menu"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the events page"
+      },
+      {
+        "type": "action",
+        "description": "Open the global navigation menu"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the retail page"
+      },
+      {
+        "type": "action",
+        "description": "Open the global navigation menu"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to return to the homepage"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the homepage statistics section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the statistics content is displayed in a mobile-friendly single-column layout"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC009",
+    "title": "View events listings for planning",
+    "description": "Users can open the Events page and see event-related directory or venue listing content rendered on the page.",
+    "category": "Browse Events and Retail",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /events"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the page content to finish loading"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify events page content is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an events or venues listing is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC010",
+    "title": "View retail directory for shopping discovery",
+    "description": "Users can open the Retail page and see retail directory content and shopping information rendered on the page.",
+    "category": "Browse Events and Retail",
     "steps": [
       {
         "type": "action",
@@ -85,304 +340,70 @@
       },
       {
         "type": "action",
-        "description": "Click the sidebar link to go to the attractions page"
+        "description": "Wait for the page content to finish loading"
       },
       {
         "type": "assertion",
-        "description": "Verify the attractions page content is displayed"
+        "description": "Verify retail page content is displayed"
       },
       {
         "type": "assertion",
-        "description": "Verify the active sidebar navigation item reflects the current page"
+        "description": "Verify a retail directory or listings section is displayed"
       }
     ],
     "priority": "High"
-  },
-  {
-    "id": "TC004",
-    "title": "Submit a retail availability request and reset to submit another",
-    "description": "Verifies a prospective tenant can submit a valid availability request, see loading then success confirmation, and reset the form to a blank state.",
-    "category": "Request Availability Form (Home)",
-    "steps": [
-      {
-        "type": "action",
-        "description": "Navigate to /"
-      },
-      {
-        "type": "action",
-        "description": "Scroll to the availability request section"
-      },
-      {
-        "type": "action",
-        "description": "Fill RetailCo in the company name field"
-      },
-      {
-        "type": "action",
-        "description": "Select a valid requirement category from the dropdown"
-      },
-      {
-        "type": "action",
-        "description": "Submit the availability request"
-      },
-      {
-        "type": "assertion",
-        "description": "Verify a loading spinner is displayed during submission"
-      },
-      {
-        "type": "assertion",
-        "description": "Verify a request received success confirmation is displayed"
-      },
-      {
-        "type": "action",
-        "description": "Click the control to submit another request"
-      },
-      {
-        "type": "assertion",
-        "description": "Verify the availability request form is shown again with empty fields"
-      }
-    ],
-    "priority": "High"
-  },
-  {
-    "id": "TC005",
-    "title": "Submit a complete event booking inquiry",
-    "description": "Verifies an organizer can complete the booking inquiry form with valid inputs and observe a consistent UI-only submission state without breaking continued form use.",
-    "category": "Events Booking Inquiry Form",
-    "steps": [
-      {
-        "type": "action",
-        "description": "Navigate to /events"
-      },
-      {
-        "type": "action",
-        "description": "Fill Inquiries organization name with non-whitespace text"
-      },
-      {
-        "type": "action",
-        "description": "Select an event type from the event type dropdown"
-      },
-      {
-        "type": "action",
-        "description": "Select an expected attendance range"
-      },
-      {
-        "type": "action",
-        "description": "Submit the booking inquiry"
-      },
-      {
-        "type": "assertion",
-        "description": "Verify the form shows a submission state change consistent with a UI-only submit"
-      },
-      {
-        "type": "assertion",
-        "description": "Verify the form remains usable after submission"
-      }
-    ],
-    "priority": "High"
-  },
-  {
-    "id": "TC006",
-    "title": "Block submission when company name is whitespace-only",
-    "description": "Verifies the availability request form prevents submission with a whitespace-only company name and shows an inline validation error.",
-    "category": "Request Availability Form (Home)",
-    "steps": [
-      {
-        "type": "action",
-        "description": "Navigate to /"
-      },
-      {
-        "type": "action",
-        "description": "Scroll to the availability request section"
-      },
-      {
-        "type": "action",
-        "description": "Fill only whitespace into the company name field"
-      },
-      {
-        "type": "action",
-        "description": "Select a valid requirement category from the dropdown"
-      },
-      {
-        "type": "action",
-        "description": "Submit the availability request"
-      },
-      {
-        "type": "assertion",
-        "description": "Verify an inline company name validation error is visible"
-      },
-      {
-        "type": "assertion",
-        "description": "Verify the success confirmation is not displayed"
-      }
-    ],
-    "priority": "High"
-  },
-  {
-    "id": "TC007",
-    "title": "Hero displays video or fallback background",
-    "description": "Verifies the landing hero shows either the YouTube background video or a readable gradient fallback when autoplay is blocked.",
-    "category": "Landing Page Storytelling Sections",
-    "steps": [
-      {
-        "type": "action",
-        "description": "Navigate to /"
-      },
-      {
-        "type": "assertion",
-        "description": "Verify the hero section shows a background video or a visible gradient fallback"
-      },
-      {
-        "type": "assertion",
-        "description": "Verify the hero section content remains readable"
-      }
-    ],
-    "priority": "Medium"
-  },
-  {
-    "id": "TC008",
-    "title": "Scroll progress increases as the user scrolls down the page",
-    "description": "Verifies the scroll progress indicator increases when a user scrolls down a long page.",
-    "category": "Scroll Progress Indicator",
-    "steps": [
-      {
-        "type": "action",
-        "description": "Navigate to /"
-      },
-      {
-        "type": "action",
-        "description": "Scroll to the top of the page"
-      },
-      {
-        "type": "action",
-        "description": "Scroll down to a mid-page storytelling section"
-      },
-      {
-        "type": "assertion",
-        "description": "Verify the scroll progress indicator shows partial progress"
-      },
-      {
-        "type": "action",
-        "description": "Scroll near the bottom of the page"
-      },
-      {
-        "type": "assertion",
-        "description": "Verify the scroll progress indicator shows near-complete progress"
-      }
-    ],
-    "priority": "Medium"
-  },
-  {
-    "id": "TC009",
-    "title": "Clear company name validation error after entering a valid name",
-    "description": "Verifies the company name validation error clears after the user replaces whitespace with a valid non-whitespace company name.",
-    "category": "Request Availability Form (Home)",
-    "steps": [
-      {
-        "type": "action",
-        "description": "Navigate to /"
-      },
-      {
-        "type": "action",
-        "description": "Scroll to the availability request section"
-      },
-      {
-        "type": "action",
-        "description": "Fill only whitespace into the company name field"
-      },
-      {
-        "type": "action",
-        "description": "Select a valid requirement category from the dropdown"
-      },
-      {
-        "type": "action",
-        "description": "Submit the availability request"
-      },
-      {
-        "type": "action",
-        "description": "Fill RetailCo in the company name field"
-      },
-      {
-        "type": "action",
-        "description": "Submit the availability request"
-      },
-      {
-        "type": "assertion",
-        "description": "Verify the company name validation error is no longer visible"
-      },
-      {
-        "type": "assertion",
-        "description": "Verify a request received success confirmation is displayed"
-      }
-    ],
-    "priority": "Medium"
-  },
-  {
-    "id": "TC010",
-    "title": "Story sections reveal while scrolling",
-    "description": "Verifies a visitor can scroll through the landing page and the stats, vision, and districts sections load and become visible as the user progresses.",
-    "category": "Landing Page Storytelling Sections",
-    "steps": [
-      {
-        "type": "action",
-        "description": "Navigate to /"
-      },
-      {
-        "type": "action",
-        "description": "Scroll down to the stats section"
-      },
-      {
-        "type": "action",
-        "description": "Scroll down to the vision section"
-      },
-      {
-        "type": "action",
-        "description": "Scroll down to the districts section"
-      },
-      {
-        "type": "assertion",
-        "description": "Verify the statistics content is displayed"
-      },
-      {
-        "type": "assertion",
-        "description": "Verify the districts content is displayed"
-      }
-    ],
-    "priority": "Medium"
   },
   {
     "id": "TC011",
-    "title": "Scroll progress resets when navigating to a new page",
-    "description": "Verifies the scroll progress indicator reflects the new page position after route changes rather than preserving the previous page's scroll state.",
-    "category": "Scroll Progress Indicator",
+    "title": "Homepage hero renders with headline and background media",
+    "description": "Verifies the homepage hero section loads and presents its key content elements without missing media or layout breakage.",
+    "category": "Homepage Hero",
     "steps": [
       {
         "type": "action",
         "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the hero section is displayed with a prominent headline and background imagery"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC012",
+    "title": "Scroll progress indicator remains visible and tracks scroll on homepage",
+    "description": "Verifies that scrolling the homepage shows a fixed progress indicator that updates as the user scrolls.",
+    "category": "Global Scroll & Progress Indicator",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down the page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a fixed scroll progress indicator is visible above the page content"
       },
       {
         "type": "action",
         "description": "Scroll near the bottom of the page"
       },
       {
-        "type": "action",
-        "description": "Click the sidebar link to go to the overview page"
-      },
-      {
         "type": "assertion",
-        "description": "Verify the overview page content is displayed"
-      },
-      {
-        "type": "assertion",
-        "description": "Verify the scroll progress indicator shows low progress near the top of the new page"
+        "description": "Verify the scroll progress indicator reflects the current scroll position"
       }
     ],
-    "priority": "Medium"
+    "priority": "High"
   },
   {
-    "id": "TC012",
-    "title": "Scroll progress indicator reflects page position",
-    "description": "Verifies the scroll progress indicator increases as the visitor scrolls down the landing page and updates consistently with position.",
-    "category": "Landing Page Storytelling Sections",
+    "id": "TC013",
+    "title": "Plan a visit using homepage secondary CTA then browse retail and events",
+    "description": "Verifies a planner can follow the homepage secondary CTA to retail and then move to events while both pages render their directory/listing content.",
+    "category": "Homepage Hero CTAs",
     "steps": [
       {
         "type": "action",
@@ -390,28 +411,115 @@
       },
       {
         "type": "action",
-        "description": "Scroll to near the top of the page content"
+        "description": "Click the secondary call-to-action in the hero"
       },
       {
         "type": "assertion",
-        "description": "Verify the scroll progress indicator shows low progress"
+        "description": "Verify the retail page main content is displayed"
       },
       {
         "type": "action",
-        "description": "Scroll to near the bottom of the page content"
+        "description": "Open the global navigation menu"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the events page"
       },
       {
         "type": "assertion",
-        "description": "Verify the scroll progress indicator shows high progress"
+        "description": "Verify events listings or directory content is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC014",
+    "title": "Plan by navigating from Retail to Events and confirming both pages render",
+    "description": "Users can move from Retail to Events through in-app navigation and see listings render correctly on both pages.",
+    "category": "Browse Events and Retail",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /retail"
+      },
+      {
+        "type": "action",
+        "description": "Click the site navigation control to open the global navigation menu"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation option for Events"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the page content to finish loading"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify events page content is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an events or venues listing is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC015",
+    "title": "Homepage scroll progress indicator tracks scroll without obscuring content",
+    "description": "Verifies the homepage scroll progress indicator remains visible and updates as the user scrolls down the page.",
+    "category": "Homepage Scroll Progress Indicator",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to roughly the middle of the homepage"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to near the bottom of the homepage"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the scroll progress indicator remains visible and shows progress near completion"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC016",
+    "title": "Close global navigation by clicking outside",
+    "description": "Verifies the global navigation can be dismissed by clicking outside the menu so content remains accessible.",
+    "category": "Global Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Open the global navigation menu"
+      },
+      {
+        "type": "action",
+        "description": "Click outside the navigation menu"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the navigation menu is closed"
       }
     ],
     "priority": "Medium"
   },
   {
-    "id": "TC013",
-    "title": "Event booking inquiry requires organization name",
-    "description": "Verifies the booking inquiry form blocks submission when the organization name is whitespace-only and allows submission once a valid name is entered.",
-    "category": "Events Booking Inquiry Form",
+    "id": "TC017",
+    "title": "Return from Events to Retail and confirm directory still renders",
+    "description": "Users can move from Events to Retail through in-app navigation and still see the retail directory rendered correctly.",
+    "category": "Browse Events and Retail",
     "steps": [
       {
         "type": "action",
@@ -419,44 +527,32 @@
       },
       {
         "type": "action",
-        "description": "Fill organization name with whitespace-only text"
+        "description": "Click the site navigation control to open the global navigation menu"
       },
       {
         "type": "action",
-        "description": "Select an event type from the event type dropdown"
+        "description": "Click the navigation option for Retail"
       },
       {
         "type": "action",
-        "description": "Select an expected attendance range"
-      },
-      {
-        "type": "action",
-        "description": "Submit the booking inquiry"
+        "description": "Wait for the page content to finish loading"
       },
       {
         "type": "assertion",
-        "description": "Verify a validation error is visible and submission is blocked"
-      },
-      {
-        "type": "action",
-        "description": "Fill organization name with non-whitespace text"
-      },
-      {
-        "type": "action",
-        "description": "Submit the booking inquiry"
+        "description": "Verify retail page content is displayed"
       },
       {
         "type": "assertion",
-        "description": "Verify the validation error is cleared"
+        "description": "Verify a retail directory or listings section is displayed"
       }
     ],
     "priority": "Medium"
   },
   {
-    "id": "TC014",
-    "title": "District card hover interaction",
-    "description": "Verifies hovering a district card on the landing page triggers the intended visual emphasis on the district image.",
-    "category": "Landing Page Storytelling Sections",
+    "id": "TC018",
+    "title": "Homepage statistics section displays four key stats",
+    "description": "Verifies that the statistics section on the homepage renders four primary statistics for users scanning mall metrics.",
+    "category": "Statistics Grid",
     "steps": [
       {
         "type": "action",
@@ -464,24 +560,291 @@
       },
       {
         "type": "action",
-        "description": "Scroll down to the districts section"
-      },
-      {
-        "type": "action",
-        "description": "Move the pointer over a district card"
+        "description": "Scroll to the statistics section"
       },
       {
         "type": "assertion",
-        "description": "Verify the district image appears visually emphasized on hover"
+        "description": "Verify four primary statistics are displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC019",
+    "title": "Primary CTA shows active interaction on press",
+    "description": "Verifies the primary call-to-action provides a visible pressed/active interaction when engaged.",
+    "category": "Hero CTA Button Interactions",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Press and hold on the primary call-to-action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the primary call-to-action shows an active pressed interaction"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC020",
+    "title": "Scroll progress indicator remains fixed without overlapping key sections",
+    "description": "Verifies that the fixed progress indicator stays pinned while scrolling through major homepage sections without obscuring content.",
+    "category": "Global Scroll & Progress Indicator",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the statistics section"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to The Vision section"
+      },
+      {
+        "type": "action",
+        "description": "Scroll back upward toward the top of the page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the scroll progress indicator remains fixed at the top and does not cover primary content"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC021",
+    "title": "District cards render responsively as three-up on desktop",
+    "description": "Verifies the Districts section shows three district cards in a side-by-side layout on a desktop viewport.",
+    "category": "The Districts Section",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Resize the viewport to a desktop width"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the homepage districts section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify three district cards are visible and presented in a multi-column layout"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC022",
+    "title": "Primary hero call-to-action responds to hover interaction",
+    "description": "Verifies the primary hero call-to-action provides a visible hover interaction to indicate interactivity.",
+    "category": "Homepage Hero",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Move the pointer over the primary call-to-action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the primary call-to-action shows a hover interaction"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC023",
+    "title": "Statistics grid adapts to single-column layout on mobile viewport",
+    "description": "Verifies that on a mobile-width viewport the statistics section displays in a single-column layout for readability.",
+    "category": "Statistics Grid",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Set viewport to a mobile width"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the statistics section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the statistics are arranged in a single-column layout"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC024",
+    "title": "Footer collapses into a single-column layout on mobile viewport",
+    "description": "Verifies the footer adapts to mobile by collapsing into a single-column layout so links remain usable on small screens.",
+    "category": "Footer and Site Links",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Resize the viewport to a mobile width"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the bottom of the page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the footer content is arranged in a single-column layout suitable for mobile"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC025",
+    "title": "Secondary CTA hover interaction is visible",
+    "description": "Verifies the secondary call-to-action provides a visible hover interaction to indicate it is actionable.",
+    "category": "Hero CTA Button Interactions",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Move the pointer over the secondary call-to-action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the secondary call-to-action shows a hover interaction"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC026",
+    "title": "Deep-link to Events and Retail routes without blank or broken states",
+    "description": "Users can directly load the Events and Retail routes and each page renders its main content without showing an empty or broken state.",
+    "category": "Browse Events and Retail",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /events"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the page content to finish loading"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /retail"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the page content to finish loading"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify retail page content is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a retail directory or listings section is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC027",
+    "title": "The Vision section renders grayscale image and supporting content",
+    "description": "Verifies that The Vision section is discoverable on scroll and displays the architectural image with accompanying copy.",
+    "category": "The Vision Section",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to The Vision section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a grayscale architectural image and supporting content are displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC028",
+    "title": "Footer links are present and respond to hover interaction",
+    "description": "Verifies users can discover footer navigation links and see a hover interaction indicating they are interactive.",
+    "category": "Footer and Site Links",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the bottom of the page"
+      },
+      {
+        "type": "action",
+        "description": "Hover a footer category link"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the hovered footer link shows a visual hover state"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC029",
+    "title": "Close global navigation with Escape key when open",
+    "description": "Verifies the global navigation can be dismissed via keyboard to support quick exit and accessibility.",
+    "category": "Global Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Open the global navigation menu"
+      },
+      {
+        "type": "action",
+        "description": "Press Escape"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the navigation menu is closed"
       }
     ],
     "priority": "Low"
   },
   {
-    "id": "TC015",
-    "title": "Vision image hover interaction",
-    "description": "Verifies hovering the vision image transitions it from grayscale toward full color with a subtle scale effect.",
-    "category": "Landing Page Storytelling Sections",
+    "id": "TC030",
+    "title": "The Vision image reveals color on hover interaction",
+    "description": "Verifies that hovering the architectural image in The Vision section triggers the intended interactive transition.",
+    "category": "The Vision Section",
     "steps": [
       {
         "type": "action",
@@ -489,24 +852,24 @@
       },
       {
         "type": "action",
-        "description": "Scroll down to the vision section"
+        "description": "Scroll to The Vision section"
       },
       {
         "type": "action",
-        "description": "Move the pointer over the vision image"
+        "description": "Hover over the architectural image"
       },
       {
         "type": "assertion",
-        "description": "Verify the vision image changes from grayscale to color and scales slightly on hover"
+        "description": "Verify the image transitions from grayscale to color with a subtle scale change"
       }
     ],
     "priority": "Low"
   },
   {
-    "id": "TC016",
-    "title": "Hero primary CTA hover and active interaction",
-    "description": "Verifies the primary hero call-to-action provides hover and active feedback to indicate it is interactive.",
-    "category": "Landing Page Storytelling Sections",
+    "id": "TC031",
+    "title": "District card hover emphasizes the hovered card",
+    "description": "Verifies hovering a district card increases its visual emphasis to help users identify the active district.",
+    "category": "The Districts Section",
     "steps": [
       {
         "type": "action",
@@ -514,15 +877,15 @@
       },
       {
         "type": "action",
-        "description": "Move the pointer over the primary hero call-to-action"
+        "description": "Scroll to the homepage districts section"
       },
       {
         "type": "action",
-        "description": "Press and hold the primary hero call-to-action"
+        "description": "Hover over a district card"
       },
       {
         "type": "assertion",
-        "description": "Verify the call-to-action visually responds on hover and active interaction"
+        "description": "Verify the hovered district card becomes visually emphasized compared to its normal state"
       }
     ],
     "priority": "Low"

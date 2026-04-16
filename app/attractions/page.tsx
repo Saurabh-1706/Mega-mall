@@ -3,7 +3,7 @@ export default function Attractions() {
     <>
 
 {/* Main Content Canvas */}
-<main className="ml-72 pt-24 min-h-screen bg-background relative overflow-hidden">
+<main className="lg:ml-72 pt-24 min-h-screen bg-background relative overflow-hidden">
 {/* Hero Section */}
 <section className="relative h-[921px] flex items-center justify-start px-20 overflow-hidden">
 <div className="absolute inset-0 z-0">

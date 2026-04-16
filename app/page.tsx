@@ -3,7 +3,7 @@ import AvailabilityForm from "./components/AvailabilityForm";
 export default function Home() {
   return (
     <>
-      <main>
+      <main className="lg:ml-72 min-h-screen bg-background overflow-x-hidden">
 {/* Hero Section — Cinematic Video-First */}
 <section className="relative h-screen flex items-center justify-center overflow-hidden">
 <div className="absolute inset-0 z-0">
@@ -161,7 +161,7 @@ export default function Home() {
 </div>
 </section>
 </main>
-<footer className="bg-surface-container-lowest py-24 px-12 border-t border-white/5">
+<footer className="lg:ml-72 bg-surface-container-lowest py-24 px-12 border-t border-white/5">
 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
 <div className="col-span-2">
 <h3 className="font-headline text-3xl font-bold text-white mb-6 uppercase tracking-widest">WEST EDMONTON MALL</h3>

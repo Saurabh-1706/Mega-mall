@@ -1,74 +1,56 @@
 version: "2"
 type: frontend
 tech_stack:
-  - next.js
-  - react
-  - tailwindcss
-  - typescript
+  - TypeScript
+  - Next.js (App Router)
+  - Tailwind CSS
+  - Framer Motion
+  - Lucide React
 routes:
   - path: /
     file: app/page.tsx
     auth_required: false
-    description: Landing page for West Edmonton Mall showing cinematic styling, background video, and availability form
-  - path: /overview
-    file: app/overview/page.tsx
-    auth_required: false
-    description: Property overview with scale stats, global reach data, and catchment maps
-  - path: /retail
-    file: app/retail/page.tsx
-    auth_required: false
-    description: Retail districts showcase (Europa Boulevard, Luxury Wing) with directory highlights
+    description: Homepage and landing page.
   - path: /attractions
     file: app/attractions/page.tsx
     auth_required: false
-    description: Entertainment anchors overview (World Waterpark, Galaxyland, Sea Life Caverns)
+    description: Attractions page detailing amusement features.
   - path: /events
     file: app/events/page.tsx
     auth_required: false
-    description: Events & Venue booking page for concerts, activations, and corporate events
+    description: Events page showing venues.
+  - path: /overview
+    file: app/overview/page.tsx
+    auth_required: false
+    description: Overview of the mall.
+  - path: /retail
+    file: app/retail/page.tsx
+    auth_required: false
+    description: Retail and shopping directory.
+  - path: /sponsorships
+    file: app/sponsorships/page.tsx
+    auth_required: false
+    description: Sponsorship opportunities.
 features:
-  - name: Navigation
-    description: Users navigate through the sidebar to different mall modules
+  - name: Global Navigation
+    description: Main cinematic menu navigation linking pages
     files:
       - app/components/Navigation.tsx
     entry_route: /
     user_interactions:
-      - Click Sidebar links (Vision, Overview, Retail, Attractions, Events)
-      - Check active state highlighting
-  - name: Video Hero Section
-    description: Landing page features an autoplay muted video hero for cinematic impact
-    files:
-      - app/page.tsx
-    entry_route: /
-    user_interactions:
-      - Verify video iframe renders and autoplays
-  - name: Availability Form
-    description: User inputs company name and retail requirement on landing page
+      - Click hamburger menu icon to open navigation
+      - Click navigation links
+      - Close navigation
+    api_calls: []
+    auth_required: false
+  - name: Availability Form Submission
+    description: Form for sponsors or event planners to inquire availability
     files:
       - app/components/AvailabilityForm.tsx
-    entry_route: /
+    entry_route: /sponsorships
     user_interactions:
-      - Fill company name
-      - Select requirement category
-      - Submit and check for success state
-  - name: Events Booking Form
-    description: User inquires about event booking on the events page
-    files:
-      - app/events/page.tsx
-    entry_route: /events
-    user_interactions:
-      - Fill organization name
-      - Select event type
-      - Select attendance range
-      - Submit booking inquiry
-  - name: Functional Scroll Indicator
-    description: A top-mounted bar that indicates scroll progress dynamically
-    files:
-      - app/components/ScrollProgress.tsx
-    entry_route: /
-    user_interactions:
-      - Scroll and verify bar width increases
-known_limitations:
-  - issue: Backend integration not yet implemented
-    location: (Entire Project)
-    impact: Forms currently demonstrate UI success/loading states but do not submit to a live database
+      - Fill form fields
+      - Click submit button
+    api_calls: []
+    auth_required: false
+known_limitations: []
