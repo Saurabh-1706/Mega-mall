@@ -53,22 +53,22 @@ export default function Overview() {
         {/* ── The Hub of the West ── */}
         <section className="py-32 px-12 lg:px-24 bg-surface-container-lowest">
           <div className="flex flex-col lg:flex-row gap-24 items-start">
-            <div className="lg:w-1/3 sticky top-32">
+            <div className="lg:w-1/3">
               <h2 className="text-4xl font-headline mb-8">The Hub of the West</h2>
               <p className="text-on-surface-variant leading-relaxed mb-8">
                 Strategically positioned as the primary commercial anchor of Western Canada, WEM attracts a diverse demographic ranging from international tourists to the highest concentration of affluent residents in the province.
               </p>
               <ul className="space-y-6">
                 <li className="flex items-center gap-4 group">
-                  <div className="w-2 h-2 bg-primary group-hover:scale-150 transition-transform" />
+                  <div className="w-2 h-2 bg-primary group-hover:scale-150 transition-transform flex-shrink-0" />
                   <span className="text-sm uppercase tracking-widest">Alberta&apos;s Premier Tourist Destination</span>
                 </li>
                 <li className="flex items-center gap-4 group">
-                  <div className="w-2 h-2 bg-primary group-hover:scale-150 transition-transform" />
+                  <div className="w-2 h-2 bg-primary group-hover:scale-150 transition-transform flex-shrink-0" />
                   <span className="text-sm uppercase tracking-widest">Global Luxury Hub</span>
                 </li>
                 <li className="flex items-center gap-4 group">
-                  <div className="w-2 h-2 bg-primary group-hover:scale-150 transition-transform" />
+                  <div className="w-2 h-2 bg-primary group-hover:scale-150 transition-transform flex-shrink-0" />
                   <span className="text-sm uppercase tracking-widest">Integrated Entertainment Ecosystem</span>
                 </li>
               </ul>
@@ -98,41 +98,42 @@ export default function Overview() {
               </div>
 
               {/* Catchment Map — CSS only */}
-              <div className="md:col-span-2 bg-surface h-[500px] relative overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-surface-container to-background flex items-center justify-center">
-                  <div className="relative w-full h-full flex items-center justify-center">
-                    <div className="absolute w-[400px] h-[400px] rounded-full border border-primary/10 animate-pulse" />
-                    <div className="absolute w-[280px] h-[280px] rounded-full border border-primary/20" />
-                    <div className="absolute w-[160px] h-[160px] rounded-full border-2 border-primary/40" />
-                    <div className="absolute w-[60px] h-[60px] rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center">
-                      <span className="text-[8px] font-bold text-primary uppercase tracking-widest text-center leading-tight">WEM</span>
-                    </div>
-                    {[
-                      { top: "20%", left: "60%", lbl: "Calgary" },
-                      { top: "30%", left: "75%", lbl: "Sask." },
-                      { top: "65%", left: "70%", lbl: "BC" },
-                      { top: "15%", left: "35%", lbl: "Intl" },
-                    ].map(({ top, left, lbl }) => (
-                      <div key={lbl} style={{ position: "absolute", top, left }} className="flex flex-col items-center gap-1">
-                        <div className="w-2 h-2 bg-primary rounded-full" />
-                        <span className="text-[9px] text-primary/60 uppercase tracking-wider">{lbl}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="absolute bottom-12 left-12">
-                  <h3 className="text-4xl font-headline mb-4">Unmatched Catchment</h3>
-                  <p className="text-on-surface-variant max-w-md">Our reach extends far beyond the city limits, capturing the economic heartbeat of four provinces.</p>
-                </div>
-                <div className="absolute top-12 right-12 flex flex-col gap-4 items-end">
-                  <div className="flex items-center gap-3">
+              <div className="md:col-span-2 bg-surface relative overflow-hidden group flex flex-col">
+                {/* Legend row — always visible above map */}
+                <div className="flex items-center justify-end gap-6 px-6 pt-6 flex-wrap">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-[2px] bg-outline-variant" />
                     <span className="text-[10px] uppercase tracking-widest text-on-surface-variant">Secondary Catchment</span>
-                    <div className="w-12 h-[2px] bg-outline-variant" />
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-[2px] bg-primary" />
                     <span className="text-[10px] uppercase tracking-widest text-primary">Primary Influence Zone</span>
-                    <div className="w-12 h-[2px] bg-primary" />
                   </div>
+                </div>
+                {/* Circle map */}
+                <div className="relative flex-1 min-h-[260px] flex items-center justify-center">
+                  <div className="absolute w-[280px] h-[280px] rounded-full border border-primary/10 animate-pulse" />
+                  <div className="absolute w-[200px] h-[200px] rounded-full border border-primary/20" />
+                  <div className="absolute w-[120px] h-[120px] rounded-full border-2 border-primary/40" />
+                  <div className="absolute w-[50px] h-[50px] rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center">
+                    <span className="text-[8px] font-bold text-primary uppercase tracking-widest text-center leading-tight">WEM</span>
+                  </div>
+                  {[
+                    { top: "22%", left: "60%", lbl: "Calgary" },
+                    { top: "32%", left: "74%", lbl: "Sask." },
+                    { top: "65%", left: "68%", lbl: "BC" },
+                    { top: "18%", left: "28%", lbl: "Intl" },
+                  ].map(({ top, left, lbl }) => (
+                    <div key={lbl} style={{ position: "absolute", top, left }} className="flex flex-col items-center gap-1">
+                      <div className="w-2 h-2 bg-primary rounded-full" />
+                      <span className="text-[9px] text-primary/60 uppercase tracking-wider">{lbl}</span>
+                    </div>
+                  ))}
+                </div>
+                {/* Text below map — no overlap */}
+                <div className="px-8 pb-8 pt-4">
+                  <h3 className="text-3xl font-headline mb-3">Unmatched Catchment</h3>
+                  <p className="text-on-surface-variant text-sm max-w-md">Our reach extends far beyond the city limits, capturing the economic heartbeat of four provinces.</p>
                 </div>
               </div>
             </div>
