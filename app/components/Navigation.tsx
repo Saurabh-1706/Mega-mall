@@ -85,7 +85,7 @@ export function Navigation() {
 
       {/* ── Mobile drawer panel ── */}
       <aside
-        className={`fixed left-0 top-0 h-screen w-72 z-[60] flex flex-col py-12 px-6
+        className={`fixed left-0 top-0 bottom-0 w-72 z-[60] flex flex-col py-12 px-6
           bg-[#131315]/95 backdrop-blur-xl shadow-[40px_0_80px_rgba(0,0,0,0.7)]
           transition-transform duration-300 ease-in-out lg:hidden
           ${open ? 'translate-x-0' : '-translate-x-full'}`}
@@ -130,7 +130,7 @@ export function Navigation() {
       </aside>
 
       {/* ── Desktop sidebar ── */}
-      <aside className="fixed left-0 top-0 h-screen flex-col py-12 px-6 z-50 bg-[#131315]/60 backdrop-blur-xl shadow-[40px_0_80px_rgba(0,0,0,0.5)] w-72 hidden lg:flex">
+      <aside className="fixed left-0 top-0 bottom-0 flex-col py-12 px-6 z-50 bg-[#131315]/60 backdrop-blur-xl shadow-[40px_0_80px_rgba(0,0,0,0.5)] w-72 hidden lg:flex">
         <div className="mb-16">
           <h1 className="text-xl font-bold tracking-[0.1em] text-[#f2ca50] font-headline">
             WEST EDMONTON MALL
