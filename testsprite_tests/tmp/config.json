@@ -1,0 +1,18 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:3000",
+  "executionArgs": {
+    "projectName": "MALL",
+    "projectPath": "d:/Project/MALL",
+    "testIds": [],
+    "additionalInstruction": "Please verify that the new components (Events page, Video Hero, Functional Scroll progress bar) operate safely. Also prioritize testing form fields like the Availability Request Form on the home page.",
+    "serverMode": "production",
+    "envs": {
+      "API_KEY": "sk-user-p1NlgGCPO0Ax31Hz5ei6Y3iHUw2c_jjfJg16wtzpln7pRbUH9uTVlSeYmFAEHpxTcjWWLAtiyqfg9dwMdgiWU9UuRyitFvC4LI7dfE_0YlcBNF_RapXg9F5eXeLaIpHMasc"
+    }
+  },
+  "serverPort": 50800,
+  "proxy": "http://f9a3e602-3df0-48a5-b8f7-1eb508e82e5c:zuWGboMEcNpaMfmYW2txR9YKZFGpojLJ@tun.testsprite.com:8080"
+}
