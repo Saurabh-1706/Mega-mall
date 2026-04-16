@@ -1,10 +1,10 @@
 "use client";
 
 import { useRef, useState, useLayoutEffect } from "react";
-import { motion, useSpring } from "framer-motion";
+import { motion, useSpring, HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-interface MagneticButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface MagneticButtonProps extends HTMLMotionProps<"button"> {
   children: React.ReactNode;
   strength?: number;
 }
@@ -41,7 +41,7 @@ export function MagneticButton({
       ref={ref}
       onMouseMove={handleMouse}
       onMouseLeave={reset}
-      animate={{ x, y }}
+      style={{ x, y }}
       className={cn("relative group overflow-hidden", className)}
       {...props}
     >
