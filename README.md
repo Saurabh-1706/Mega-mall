@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # West Edmonton Mall — Interactive Sales Deck
 
 A cinematic, fully interactive browser-based sales tool for **West Edmonton Mall** — North America's largest shopping mall. Built as a high-fidelity pitch deck for prospective retail tenants, corporate sponsors, and event partners.
@@ -140,3 +141,7 @@ npm run start
 Built for the Liat.ai Interview Project brief.
 
 **Subject:** West Edmonton Mall (WEM), Edmonton, Alberta — World's Largest Shopping Mall by GLA.
+=======
+# Mega-mall
+A browser-based sales tool that replaces static PDFs and slide decks for the world's largest shopping mall — featuring non-linear navigation, AI-generated visuals, and a full sponsorship module.
+>>>>>>> 06f3c71aa7fc49d984eea29c8977253f6b8bbfa0
