@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Scale layout so 100% browser zoom matches the 80% zoom appearance */
+html {
+  zoom: 0.8;
+}
+
 @theme inline {
   --color-tertiary-container: #97b0ff;
   --color-on-primary-container: #554300;
