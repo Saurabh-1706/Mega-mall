@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Overview | West Edmonton Mall",
@@ -14,10 +15,13 @@ export default function Overview() {
         {/* ── Hero: SCALE WITHOUT PRECEDENT ── */}
         <section className="relative h-screen flex flex-col justify-center px-12 lg:px-24 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img
+            <Image
               alt="WEM Overview"
-              className="w-full h-full object-cover opacity-40"
+              className="object-cover opacity-40"
               src="/images/wem/wem_night_hero.jpg"
+              fill
+              sizes="100vw"
+              priority
             />
             <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
           </div>
@@ -157,13 +161,13 @@ export default function Overview() {
               <a className="text-xs uppercase tracking-widest text-white border-b-2 border-primary self-start pb-1 hover:text-primary transition-colors" href="#">Explore the District</a>
             </div>
             <div className="lg:col-span-8 relative group overflow-hidden">
-              <img alt="Europa Boulevard" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" src="/images/wem/wem_europa.jpg" />
+              <Image alt="Europa Boulevard" className="object-cover group-hover:scale-105 transition-transform duration-[2000ms]" src="/images/wem/wem_europa.jpg" fill sizes="(max-width: 1024px) 100vw, 66vw" />
             </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 border-b border-outline-variant/30">
             <div className="lg:col-span-8 relative group overflow-hidden order-2 lg:order-1">
-              <img alt="Luxury Retail at WEM" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" src="/images/wem/wem_luxury_retail.jpg" />
+              <Image alt="Luxury Retail at WEM" className="object-cover group-hover:scale-105 transition-transform duration-[2000ms]" src="/images/wem/wem_luxury_retail.jpg" fill sizes="(max-width: 1024px) 100vw, 66vw" />
             </div>
             <div className="lg:col-span-4 p-12 lg:p-24 flex flex-col justify-between min-h-[600px] order-1 lg:order-2">
               <div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Sponsorships & Brand Partnerships | West Edmonton Mall",
@@ -77,9 +78,13 @@ export default function Sponsorships() {
         {/* ── Hero ── */}
         <section className="relative h-screen flex flex-col justify-center px-12 lg:px-24 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <div
-              className="absolute inset-0 w-full h-full bg-cover bg-center scale-105 pointer-events-none"
-              style={{ backgroundImage: "url('/images/wem/wem_night_hero.jpg')" }}
+            <Image
+              alt="West Edmonton Mall at night"
+              className="object-cover scale-105"
+              src="/images/wem/wem_night_hero.jpg"
+              fill
+              sizes="100vw"
+              priority
             />
             <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />

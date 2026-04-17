@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ParallaxImage } from "./../components/ui/ParallaxImage";
 
 export default function Attractions() {
@@ -9,7 +10,7 @@ export default function Attractions() {
 {/* Hero Section */}
 <section className="relative h-[600px] md:h-[921px] flex items-center justify-start px-6 md:px-20 overflow-hidden">
 <div className="absolute inset-0 z-0">
-<img className="w-full h-full object-cover opacity-60 brightness-75 grayscale-[20%]" src="/images/wem/wem_galaxyland.jpg" alt="Galaxyland indoor amusement park at WEM" />
+<Image className="object-cover opacity-60 brightness-75 grayscale-[20%]" src="/images/wem/wem_galaxyland.jpg" alt="Galaxyland indoor amusement park at WEM" fill sizes="100vw" priority />
 <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
 <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
 </div>

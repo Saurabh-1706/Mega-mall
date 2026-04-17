@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
-/* Scale layout so 100% browser zoom matches the 80% zoom appearance */
+/* Scale layout so 100% browser zoom matches the 80% zoom appearance.
+   Using font-size instead of zoom: zoom breaks Lighthouse viewport metrics. */
 html {
-  zoom: 0.8;
+  font-size: 90%;
 }
 
 @theme inline {

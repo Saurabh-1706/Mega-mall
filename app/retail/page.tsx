@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Retail() {
   return (
     <>
@@ -5,7 +7,9 @@ export default function Retail() {
 {/* Hero Section */}
 <section className="relative h-[921px] flex items-center px-8 md:px-24 overflow-hidden">
 <div className="absolute inset-0 z-0">
-<img className="w-full h-full object-cover brightness-50 contrast-125" src="/images/wem/wem_interior.jpg" alt="West Edmonton Mall luxury retail corridor" />
+<div className="relative w-full h-full">
+<Image className="object-cover brightness-50 contrast-125" src="/images/wem/wem_interior.jpg" alt="West Edmonton Mall luxury retail corridor" fill sizes="100vw" priority />
+</div>
 <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent"></div>
 </div>
 <div className="relative z-10 max-w-4xl">
@@ -33,7 +37,7 @@ export default function Retail() {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
 <div className="md:col-span-8 h-[600px] relative group overflow-hidden">
-<img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="/images/wem/wem_europa.jpg" alt="Europa Boulevard luxury boutique at West Edmonton Mall" />
+<Image className="object-cover transition-transform duration-700 group-hover:scale-110" src="/images/wem/wem_europa.jpg" alt="Europa Boulevard luxury boutique at West Edmonton Mall" fill sizes="(max-width: 768px) 100vw, 66vw" />
 <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-background/90 to-transparent">
 <h3 className="text-2xl font-headline mb-2 text-primary">Classic Heritage</h3>
 <p className="text-sm text-on-surface-variant max-w-md">Bespoke storefront designs that honor architectural history while hosting the latest in contemporary fashion.</p>
@@ -46,7 +50,7 @@ export default function Retail() {
 <p className="text-on-surface-variant text-sm leading-relaxed">Every detail, from the gas lanterns to the masonry, is meticulously crafted to transport the visitor to a world of European sophistication.</p>
 </div>
 <div className="h-1/2 relative overflow-hidden">
-<img className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="/images/wem/wem_night_hero.jpg" alt="Luxury retail interior at West Edmonton Mall" />
+<Image className="object-cover grayscale hover:grayscale-0 transition-all duration-500" src="/images/wem/wem_night_hero.jpg" alt="Luxury retail interior at West Edmonton Mall" fill sizes="33vw" />
 </div>
 </div>
 </div>
@@ -60,7 +64,7 @@ export default function Retail() {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[1000px]">
 <div className="md:col-span-2 md:row-span-2 bg-surface-container-high relative overflow-hidden group">
-<img className="w-full h-full object-cover brightness-75 group-hover:brightness-100 transition-all duration-700" src="/images/wem/wem_luxury_retail.jpg" alt="Flagship luxury retail experience at WEM" />
+<Image className="object-cover brightness-75 group-hover:brightness-100 transition-all duration-700" src="/images/wem/wem_luxury_retail.jpg" alt="Flagship luxury retail experience at WEM" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 p-12 flex flex-col justify-end">
 <h3 className="text-4xl font-headline text-white mb-4">Flagship Experiences</h3>
 <p className="text-white/70 max-w-md">Multi-level retail destinations for the world's leading brands, providing unprecedented space for creative brand storytelling.</p>
@@ -80,8 +84,8 @@ export default function Retail() {
 </div>
 </div>
 </div>
-<div className="bg-surface-container-low relative group">
-<img className="w-full h-full object-cover" src="/images/wem/wem_boutique_display.jpg" alt="Premium leather goods boutique" />
+<div className="bg-surface-container-low relative group h-48">
+<Image className="object-cover" src="/images/wem/wem_boutique_display.jpg" alt="Premium leather goods boutique" fill sizes="(max-width: 768px) 100vw, 25vw" />
 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 <span className="text-white font-bold uppercase tracking-widest text-xs">View Details</span>
 </div>
@@ -100,7 +104,9 @@ export default function Retail() {
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
 <div className="order-2 lg:order-1 relative">
 <div className="absolute -top-12 -left-12 w-64 h-64 bg-primary/10 -z-10"></div>
-<img className="w-full shadow-[60px_60px_0px_rgba(242,202,80,0.05)]" src="/images/wem/wem_phygital.jpg" alt="Futuristic phygital retail concept at WEM" />
+<div className="relative w-full aspect-video">
+<Image className="object-cover shadow-[60px_60px_0px_rgba(242,202,80,0.05)]" src="/images/wem/wem_phygital.jpg" alt="Futuristic phygital retail concept at WEM" fill sizes="(max-width: 1024px) 100vw, 50vw" />
+</div>
 </div>
 <div className="order-1 lg:order-2">
 <span className="text-primary font-label text-sm uppercase tracking-[0.4em] block mb-8">The Future is Here</span>

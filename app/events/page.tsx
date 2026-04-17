@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { MagneticButton } from "../components/ui/MagneticButton";
 import { ParallaxImage } from "../components/ui/ParallaxImage";
 
@@ -15,10 +16,13 @@ export default function Events() {
         {/* ── Hero ── */}
         <section className="relative h-screen flex flex-col justify-center px-12 lg:px-24 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img
+            <Image
               alt="WEM Concert Event"
-              className="w-full h-full object-cover opacity-50 scale-105"
+              className="object-cover opacity-50 scale-105"
               src="/images/wem/wem_night_hero.jpg"
+              fill
+              sizes="100vw"
+              priority
             />
             <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
@@ -97,10 +101,12 @@ export default function Events() {
                 },
               ].map(({ title, category, cap, img }) => (
                 <div key={title} className="group relative aspect-[3/4] overflow-hidden bg-black">
-                  <img
+                  <Image
                     alt={title}
-                    className="w-full h-full object-cover opacity-55 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700"
+                    className="object-cover opacity-55 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700"
                     src={img}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
                     <p className="text-primary font-label uppercase text-[10px] tracking-widest mb-2">{category}</p>
